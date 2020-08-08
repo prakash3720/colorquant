@@ -35,7 +35,7 @@ app.post('/upload',upload.single('file'),(req,res)=>{
                 return res.json({success:0})
             }
             fs.unlinkSync(`input/${req.file.filename}`)
-            return res.json({success:1,url:`http://localhost:5000/view/${id}`})
+            return res.json({success:1,url:`https://colorquant.herokuapp.com/view/${id}`})
         })
     }
 })

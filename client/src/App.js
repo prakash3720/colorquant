@@ -33,7 +33,7 @@ function App() {
     let formData = new FormData();
     formData.append('file', inputImg);
     formData.append('value',document.querySelector('#quantvals').value)
-    axios.post('http://localhost:5000/upload',formData,{}).then(res=>{
+    axios.post('https://colorquant.herokuapp.com/upload',formData,{}).then(res=>{
       setProgress(0)
       setOutput(1)
       inputRef.current.src=""
